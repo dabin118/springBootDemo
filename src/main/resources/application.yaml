@@ -1,0 +1,27 @@
+
+#和Spring boot中的配置相关；所有相关的依赖都可以在这里配置；
+#因为在底层的时候，就与yaml文件相关联
+
+#debug: true
+
+#可以设置一个对象的初始值；并和bean configurationPropertites设定；
+#可以用于配置类的灵活配置
+username:
+ id: 1
+ name: namename
+ age: 100
+
+
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true&serverTimezone=Hongkong&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      connection-test-query: SELECT 1 FROM User
+      connection-timeout: 30000
+      maximum-pool-size: 20
+      max-lifetime: 1800000
+      minimum-idle: 5
